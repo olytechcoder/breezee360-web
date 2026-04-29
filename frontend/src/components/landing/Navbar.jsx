@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Moon, Sun, Wind } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 import { useTheme } from "@/components/ThemeProvider";
 
 const links = [
@@ -32,14 +32,21 @@ export default function Navbar() {
         <a
           href="#top"
           data-testid="brand-logo"
-          className="flex items-center gap-2.5 group"
+          className="flex items-center gap-3 group"
         >
-          <span className="grid place-items-center w-9 h-9 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary/15 transition-colors">
-            <Wind className="w-5 h-5" />
-          </span>
-          <span className="font-serif text-xl font-semibold tracking-tight">
-            Breezee<span className="text-primary">360</span>
-          </span>
+          <img
+            src="/breezee-logo.jpeg"
+            alt="Breezee360 — Always there"
+            className="h-11 w-11 rounded-xl object-cover ring-1 ring-border group-hover:ring-primary/40 transition-all"
+          />
+          <div className="hidden sm:flex flex-col leading-none">
+            <span className="font-serif text-lg font-semibold tracking-tight">
+              Breezee<span className="text-primary">360°</span>
+            </span>
+            <span className="text-[10px] uppercase tracking-[0.22em] text-secondary-foreground mt-1">
+              Always there
+            </span>
+          </div>
         </a>
 
         <nav className="hidden md:flex items-center gap-9">
