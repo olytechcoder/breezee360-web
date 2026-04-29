@@ -88,19 +88,19 @@ body {
         @apply backdrop-blur-xl bg-background/70 border border-border/60 rounded-3xl;
     }
     .btn-pill-primary {
-        @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5
+        @apply inline-flex items-center justify-center gap-2 rounded-2xl px-7 py-3.5
                bg-primary text-primary-foreground font-medium text-base
                transition-all duration-300 shadow-sm
                hover:shadow-lg hover:-translate-y-0.5 hover:bg-primary/90;
     }
     .btn-pill-ghost {
-        @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5
+        @apply inline-flex items-center justify-center gap-2 rounded-2xl px-7 py-3.5
                bg-transparent text-foreground font-medium text-base
                border border-border hover:border-primary/40 hover:bg-accent
                transition-all duration-300;
     }
     .input-pill {
-        @apply rounded-full px-6 py-3.5 bg-background border border-border
+        @apply rounded-2xl px-5 py-3.5 bg-background border border-border
                focus:ring-2 focus:ring-primary/30 focus:border-primary
                outline-none transition-all duration-200 text-foreground
                placeholder:text-muted-foreground;
