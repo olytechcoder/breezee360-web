@@ -2,11 +2,11 @@ export default function EmotionalHook() {
   return (
     <section
       data-testid="emotional-hook-section"
-      className="relative py-32 md:py-40 overflow-hidden"
+      className="relative py-32 md:py-40 overflow-hidden bg-[#071410]"
     >
       <div
         aria-hidden
-        className="absolute inset-0 -z-10"
+        className="absolute inset-0 -z-10 opacity-70"
         style={{
           backgroundImage:
             "url('https://images.pexels.com/photos/13974641/pexels-photo-13974641.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1200&w=1800')",
@@ -14,7 +14,7 @@ export default function EmotionalHook() {
           backgroundPosition: "center",
         }}
       />
-      <div aria-hidden className="absolute inset-0 -z-10 bg-black/55" />
+      <div aria-hidden className="absolute inset-0 -z-10 bg-[#071410]/75" />
       <div
         aria-hidden
         className="absolute inset-0 -z-10"
@@ -34,7 +34,7 @@ export default function EmotionalHook() {
           Just a gentler way to{" "}
           <span className="italic text-emerald-300">become consistent.</span>
         </h2>
-        <p className="mt-8 text-lg md:text-xl text-emerald-50/85 max-w-2xl mx-auto leading-relaxed">
+        <p className="mt-8 text-lg md:text-xl text-white/85 max-w-2xl mx-auto leading-relaxed">
           Breezee360 was built on a single belief: sustainable growth comes
           from kindness, not pressure. Every screen, every nudge, every silence
           is designed to protect that.
