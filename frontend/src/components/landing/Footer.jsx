@@ -24,20 +24,13 @@ export default function Footer() {
       <div className="container-soft">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
           <div className="md:col-span-5">
-            <a href="#top" className="flex items-center gap-3">
+            <a href="#top" className="flex items-center">
               <img
-                src="/breezee-logo.jpeg"
+                src="/breezee-logo.png"
                 alt="Breezee360"
-                className="h-12 w-12 rounded-xl object-cover ring-1 ring-border"
+                className="h-12 w-auto select-none"
+                draggable="false"
               />
-              <div className="flex flex-col leading-none">
-                <span className="font-serif text-xl font-semibold">
-                  Breezee<span className="text-primary">360°</span>
-                </span>
-                <span className="text-[10px] uppercase tracking-[0.22em] text-secondary-foreground mt-1.5">
-                  Always there
-                </span>
-              </div>
             </a>
             <p className="mt-5 text-secondary-foreground text-base leading-relaxed max-w-sm">
               A daily rhythm for humans who want to grow without grinding.

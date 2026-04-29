@@ -32,21 +32,14 @@ export default function Navbar() {
         <a
           href="#top"
           data-testid="brand-logo"
-          className="flex items-center gap-3 group"
+          className="flex items-center group"
         >
           <img
-            src="/breezee-logo.jpeg"
+            src="/breezee-logo.png"
             alt="Breezee360 — Always there"
-            className="h-11 w-11 rounded-xl object-cover ring-1 ring-border group-hover:ring-primary/40 transition-all"
+            className="h-9 md:h-10 w-auto select-none dark:invert-0 transition-opacity group-hover:opacity-90"
+            draggable="false"
           />
-          <div className="hidden sm:flex flex-col leading-none">
-            <span className="font-serif text-lg font-semibold tracking-tight">
-              Breezee<span className="text-primary">360°</span>
-            </span>
-            <span className="text-[10px] uppercase tracking-[0.22em] text-secondary-foreground mt-1">
-              Always there
-            </span>
-          </div>
         </a>
 
         <nav className="hidden md:flex items-center gap-9">
