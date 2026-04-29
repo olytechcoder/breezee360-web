@@ -1,0 +1,107 @@
+import { Apple, Play, Star } from "lucide-react";
+import PhoneMockup from "./PhoneMockup";
+import WaitlistForm from "./WaitlistForm";
+
+export default function Hero() {
+  return (
+    <section
+      id="top"
+      data-testid="hero-section"
+      className="relative overflow-hidden pt-12 md:pt-20 pb-24 md:pb-32"
+    >
+      {/* Soft ambient gradient */}
+      <div
+        aria-hidden
+        className="absolute inset-0 -z-10 opacity-90"
+        style={{
+          backgroundImage:
+            "radial-gradient(60% 50% at 80% 0%, hsl(var(--primary) / 0.12), transparent 60%), radial-gradient(40% 40% at 10% 30%, hsl(var(--primary) / 0.08), transparent 60%)",
+        }}
+      />
+
+      <div className="container-soft grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        {/* LEFT — copy */}
+        <div className="animate-fade-up">
+          <span
+            data-testid="hero-eyebrow"
+            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-accent text-accent-foreground border border-primary/15 text-xs font-medium tracking-wide"
+          >
+            <Star className="w-3.5 h-3.5 fill-current" />
+            A calmer way to stay consistent
+          </span>
+
+          <h1
+            data-testid="hero-headline"
+            className="mt-7 font-serif text-5xl md:text-6xl xl:text-7xl leading-[1.05] tracking-tight"
+          >
+            Productivity that
+            <br />
+            <span className="italic text-primary">breathes</span> with you.
+          </h1>
+
+          <p
+            data-testid="hero-subheadline"
+            className="mt-7 text-lg md:text-xl text-secondary-foreground max-w-xl leading-relaxed"
+          >
+            Breezee360 is a daily rhythm system: motivation at night,
+            gentle action during the day, and reflection on Sunday — designed
+            for humans who are tired of toxic productivity apps.
+          </p>
+
+          <div className="mt-9 space-y-5">
+            <WaitlistForm variant="inline" testidPrefix="hero-waitlist" />
+
+            <div className="flex flex-wrap items-center gap-3">
+              <a
+                data-testid="hero-app-store-btn"
+                href="#waitlist"
+                className="btn-pill-ghost text-sm py-3 px-5"
+              >
+                <Apple className="w-4 h-4" />
+                App Store
+              </a>
+              <a
+                data-testid="hero-play-store-btn"
+                href="#waitlist"
+                className="btn-pill-ghost text-sm py-3 px-5"
+              >
+                <Play className="w-4 h-4" />
+                Google Play
+              </a>
+              <span className="text-xs text-muted-foreground ml-1">
+                Coming early 2026
+              </span>
+            </div>
+          </div>
+
+          {/* trust row */}
+          <div className="mt-12 flex items-center gap-6">
+            <div className="flex -space-x-2">
+              {[
+                "https://images.unsplash.com/photo-1758272421799-f944661c88f4?crop=entropy&cs=srgb&fm=jpg&w=80",
+                "https://images.pexels.com/photos/4047830/pexels-photo-4047830.jpeg?auto=compress&cs=tinysrgb&w=80",
+                "https://images.unsplash.com/photo-1765648580890-732fa6d769c5?crop=entropy&cs=srgb&fm=jpg&w=80",
+              ].map((src, i) => (
+                <img
+                  key={i}
+                  src={src}
+                  alt=""
+                  className="w-9 h-9 rounded-full border-2 border-background object-cover"
+                />
+              ))}
+            </div>
+            <p className="text-sm text-secondary-foreground">
+              Joined by <span className="font-semibold text-foreground">1,200+</span>{" "}
+              calm builders & freelancers
+            </p>
+          </div>
+        </div>
+
+        {/* RIGHT — phone mockup */}
+        <div className="relative flex justify-center animate-fade-up [animation-delay:200ms]">
+          <PhoneMockup />
+        </div>
+      </div>
+    </section>
+  );
+}
