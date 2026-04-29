@@ -1,5 +1,5 @@
-import { Apple, Play } from "lucide-react";
 import WaitlistForm from "./WaitlistForm";
+import StoreBadges from "./StoreBadges";
 
 export default function FinalCTA() {
   return (
@@ -32,22 +32,7 @@ export default function FinalCTA() {
           <div className="mt-10 flex flex-col items-center gap-6">
             <WaitlistForm variant="card" testidPrefix="cta-waitlist" />
 
-            <div className="flex flex-wrap items-center justify-center gap-3">
-              <a
-                data-testid="cta-app-store-btn"
-                href="#waitlist"
-                className="btn-pill-ghost text-sm"
-              >
-                <Apple className="w-4 h-4" /> Download on App Store
-              </a>
-              <a
-                data-testid="cta-play-store-btn"
-                href="#waitlist"
-                className="btn-pill-ghost text-sm"
-              >
-                <Play className="w-4 h-4" /> Get it on Google Play
-              </a>
-            </div>
+            <StoreBadges className="justify-center" />
           </div>
         </div>
       </div>

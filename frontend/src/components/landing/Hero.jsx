@@ -1,6 +1,7 @@
-import { Apple, Play, Star } from "lucide-react";
+import { Star } from "lucide-react";
 import PhoneMockup from "./PhoneMockup";
 import WaitlistForm from "./WaitlistForm";
+import StoreBadges from "./StoreBadges";
 
 export default function Hero() {
   return (
@@ -52,22 +53,7 @@ export default function Hero() {
             <WaitlistForm variant="inline" testidPrefix="hero-waitlist" />
 
             <div className="flex flex-wrap items-center gap-3">
-              <a
-                data-testid="hero-app-store-btn"
-                href="#waitlist"
-                className="btn-pill-ghost text-sm py-3 px-5"
-              >
-                <Apple className="w-4 h-4" />
-                App Store
-              </a>
-              <a
-                data-testid="hero-play-store-btn"
-                href="#waitlist"
-                className="btn-pill-ghost text-sm py-3 px-5"
-              >
-                <Play className="w-4 h-4" />
-                Google Play
-              </a>
+              <StoreBadges />
               <span className="text-xs text-muted-foreground ml-1">
                 Coming early 2026
               </span>
