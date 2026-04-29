@@ -3,7 +3,10 @@ import axios from "axios";
 import { toast } from "sonner";
 import { Loader2, ArrowRight } from "lucide-react";
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+// Relative path so the same code works on:
+//   • Vercel       → handled by /api/waitlist.js serverless function
+//   • Local/preview → routed via Kubernetes ingress to the FastAPI backend
+const WAITLIST_URL = "/api/waitlist";
 
 export default function WaitlistForm({ variant = "inline", testidPrefix = "waitlist" }) {
   const [email, setEmail] = useState("");
@@ -15,7 +18,7 @@ export default function WaitlistForm({ variant = "inline", testidPrefix = "waitl
     if (!email) return;
     setLoading(true);
     try {
-      const res = await axios.post(`${API}/waitlist`, {
+      const res = await axios.post(WAITLIST_URL, {
         email,
         name: name || undefined,
         source: variant === "card" ? "final_cta" : "hero",
