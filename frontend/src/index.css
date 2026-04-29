@@ -78,7 +78,16 @@ body {
         @apply max-w-7xl mx-auto px-6 md:px-12;
     }
     .label-eyebrow {
-        @apply text-xs uppercase tracking-[0.22em] font-bold text-primary;
+        @apply inline-flex items-center gap-2.5 text-[11px] md:text-xs uppercase
+               tracking-[0.28em] font-medium text-foreground/80;
+    }
+    .label-eyebrow::before {
+        content: "[";
+        @apply font-serif text-lg leading-none font-light text-primary/55 -translate-y-px;
+    }
+    .label-eyebrow::after {
+        content: "]";
+        @apply font-serif text-lg leading-none font-light text-primary/55 -translate-y-px;
     }
     .soft-card {
         @apply bg-card text-card-foreground rounded-3xl border border-border/70

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Moon, Sun } from "lucide-react";
-import { useTheme } from "@/components/ThemeProvider";
+import ThemeToggle from "@/components/landing/ThemeToggle";
 
 const links = [
   { label: "How it works", hash: "#how-it-works" },
@@ -11,7 +10,6 @@ const links = [
 ];
 
 export default function Navbar() {
-  const { theme, setTheme } = useTheme();
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
@@ -76,18 +74,7 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-2.5">
-          <button
-            data-testid="theme-toggle-btn"
-            aria-label="Toggle theme"
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="grid place-items-center w-10 h-10 rounded-full border border-border hover:border-primary/40 hover:bg-accent transition-all"
-          >
-            {theme === "dark" ? (
-              <Sun className="w-4 h-4" />
-            ) : (
-              <Moon className="w-4 h-4" />
-            )}
-          </button>
+          <ThemeToggle />
           <a
             data-testid="navbar-cta-waitlist"
             href={location.pathname === "/" ? "#waitlist" : "/#waitlist"}

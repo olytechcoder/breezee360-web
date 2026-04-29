@@ -294,9 +294,11 @@ export default function Privacy() {
           marketing.
         </p>
 
-        <div className="mt-8 inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-accent text-accent-foreground border border-primary/20 text-xs font-medium">
-          <Shield className="w-3.5 h-3.5" />
-          Effective date: {EFFECTIVE_DATE}
+        <div className="mt-8 inline-flex items-center gap-2.5 text-[11px] md:text-xs uppercase tracking-[0.28em] font-medium text-foreground/80">
+          <span aria-hidden className="font-serif text-lg leading-none font-light text-primary/55 -translate-y-px">[</span>
+          <Shield className="w-3.5 h-3.5 text-primary/70" />
+          Effective date · {EFFECTIVE_DATE}
+          <span aria-hidden className="font-serif text-lg leading-none font-light text-primary/55 -translate-y-px">]</span>
         </div>
       </section>
 

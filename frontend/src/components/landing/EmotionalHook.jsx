@@ -25,9 +25,11 @@ export default function EmotionalHook() {
       />
 
       <div className="container-soft text-center text-white max-w-4xl mx-auto">
-        <p className="text-xs uppercase tracking-[0.3em] font-bold text-emerald-300 mb-7">
+        <span className="inline-flex items-center gap-2.5 text-[11px] md:text-xs uppercase tracking-[0.28em] font-medium text-emerald-100/80 mb-7">
+          <span aria-hidden className="font-serif text-lg leading-none font-light text-emerald-300/70 -translate-y-px">[</span>
           The promise
-        </p>
+          <span aria-hidden className="font-serif text-lg leading-none font-light text-emerald-300/70 -translate-y-px">]</span>
+        </span>
         <h2 className="font-serif text-4xl md:text-6xl leading-[1.08] tracking-tight">
           No guilt. No burnout.
           <br />
@@ -40,15 +42,17 @@ export default function EmotionalHook() {
           is designed to protect that.
         </p>
 
-        <div className="mt-12 inline-flex flex-wrap items-center justify-center gap-3">
+        <div className="mt-12 inline-flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-[11px] md:text-xs uppercase tracking-[0.28em] font-medium text-white/85">
           {["No streaks weaponized", "No guilt design", "No sold attention"].map(
             (b, i) => (
               <span
                 key={i}
                 data-testid={`promise-pill-${i}`}
-                className="rounded-full px-4 py-2 bg-white/10 backdrop-blur-md text-sm border border-white/15"
+                className="inline-flex items-center gap-2.5"
               >
+                <span aria-hidden className="font-serif text-lg leading-none font-light text-emerald-300/70 -translate-y-px">[</span>
                 {b}
+                <span aria-hidden className="font-serif text-lg leading-none font-light text-emerald-300/70 -translate-y-px">]</span>
               </span>
             )
           )}

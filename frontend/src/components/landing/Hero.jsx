@@ -1,7 +1,7 @@
-import { Star } from "lucide-react";
 import PhoneMockup from "./PhoneMockup";
 import WaitlistForm from "./WaitlistForm";
 import StoreBadges from "./StoreBadges";
+import BracketLabel from "./BracketLabel";
 
 export default function Hero() {
   return (
@@ -21,13 +21,7 @@ export default function Hero() {
 
       <div className="container-soft grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div className="animate-fade-up">
-          <span
-            data-testid="hero-eyebrow"
-            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-accent text-accent-foreground border border-primary/15 text-xs font-medium tracking-wide"
-          >
-            <Star className="w-3.5 h-3.5 fill-current" />
-            The calm productivity app
-          </span>
+          <BracketLabel testid="hero-eyebrow">Calm productivity app</BracketLabel>
 
           <h1
             data-testid="hero-headline"
