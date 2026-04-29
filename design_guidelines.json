@@ -1,0 +1,147 @@
+{
+  "theme": "light_and_dark",
+  "archetype": "1 (Organic & Earthy)",
+  "vibe": "Calm, supportive, human, minimal hype, grounded.",
+  "philosophy": "Productivity through well-being, not pressure.",
+  "colors": {
+    "light": {
+      "background": "#F9FAFB",
+      "foreground": "#111827",
+      "primary": "#0D7A5F",
+      "primary_foreground": "#FFFFFF",
+      "secondary": "#E5E7EB",
+      "secondary_foreground": "#67727E",
+      "accent": "#F0FDF4",
+      "accent_foreground": "#0D7A5F",
+      "border": "#E5E7EB",
+      "muted": "#F3F4F6",
+      "muted_foreground": "#6B7280"
+    },
+    "dark": {
+      "background": "#071410",
+      "foreground": "#F9FAFB",
+      "primary": "#10B981",
+      "primary_foreground": "#071410",
+      "secondary": "#1A2E26",
+      "secondary_foreground": "#A1B2AB",
+      "accent": "#0F291E",
+      "accent_foreground": "#34D399",
+      "border": "#1A2E26",
+      "muted": "#0F291E",
+      "muted_foreground": "#94A3B8"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "heading": "Fraunces, serif",
+      "body": "Manrope, sans-serif"
+    },
+    "scale": {
+      "h1": "text-5xl md:text-6xl tracking-tight leading-tight",
+      "h2": "text-3xl md:text-4xl tracking-tight leading-snug",
+      "h3": "text-2xl md:text-3xl tracking-tight",
+      "h4": "text-xl font-medium",
+      "body": "text-base md:text-lg leading-relaxed text-secondary-foreground dark:text-muted-foreground",
+      "label": "text-xs uppercase tracking-[0.2em] font-bold text-primary dark:text-primary"
+    }
+  },
+  "layout_and_spacing": {
+    "philosophy": "Generous spacing, optical alignment, calm flow.",
+    "section_padding": "py-24 md:py-32",
+    "container": "max-w-7xl mx-auto px-6 md:px-12",
+    "grid_bento": "grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8",
+    "border_radius": "rounded-2xl md:rounded-[2rem]",
+    "surfaces": {
+      "glass": "backdrop-blur-xl bg-white/70 dark:bg-[#071410]/70 border border-black/5 dark:border-white/10",
+      "soft_card": "bg-white dark:bg-[#0F291E] shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)] rounded-2xl md:rounded-[2rem] p-8 md:p-12 border border-black/5 dark:border-white/5"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 py-4 text-base font-medium transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5",
+      "secondary": "bg-secondary dark:bg-secondary text-foreground hover:bg-secondary/80 rounded-full px-8 py-4 text-base font-medium transition-all"
+    },
+    "navigation": "Sticky top-0 z-50 glass surface. Logo left, center links (desktop), right CTA.",
+    "inputs": "Shadcn UI Form, Input. Override with: rounded-full px-6 py-4 bg-white dark:bg-black/20 border-border focus:ring-primary focus:border-primary",
+    "badges": "rounded-full px-4 py-1.5 text-sm font-medium bg-accent text-accent-foreground border border-accent/20"
+  },
+  "sections_strategy": {
+    "hero": {
+      "layout": "grid grid-cols-1 lg:grid-cols-2 gap-16 items-center",
+      "content": "H1 title, subheadline, dual CTAs (Waitlist email input + App Store buttons).",
+      "visual": "A beautifully crafted CSS/HTML phone mockup holding a 'Night Fuel' or 'Weekly Wrap' UI. Background layered with a soft abstract green gradient texture."
+    },
+    "problem": {
+      "vibe": "Deep empathy. Soft muted background (bg-accent dark:bg-accent/10).",
+      "layout": "Centered large typographic statement (H2) about burnout, followed by a 3-column subtle text-heavy grid explaining the 'hustle culture' issue."
+    },
+    "how_it_works": {
+      "vibe": "The Daily Rhythm. Asymmetrical journey.",
+      "layout": "Vertical timeline or overlapping bento. 1. Night Fuel (dark/moody card). 2. Daily Action (bright/active card). 3. Weekly Wrap (calm/reflective card)."
+    },
+    "features": {
+      "layout": "Tetris Bento grid. A mix of col-span-8 and col-span-4 cards. Features: Nightly Quotes, Task Time-blocking, Energy Check-ins, Wins Jar, Gentle Recovery."
+    },
+    "emotional_hook": {
+      "visual": "Full-width section with the zen stones image spanning the background. Dark overlay (bg-black/40).",
+      "content": "Centered text: 'Productivity through well-being, not pressure.' large serif text in white."
+    },
+    "social_proof": {
+      "layout": "Grid of soft cards containing testimonials from freelancers and young professionals. Include avatar images."
+    },
+    "cta_final": {
+      "vibe": "Calm invitation, not urgent hard-sell.",
+      "layout": "Centered card with glassmorphism or soft background gradient. Waitlist form + store buttons."
+    },
+    "footer": {
+      "layout": "Clean, minimal. Privacy-first messaging ('We respect your mind and your data.')."
+    }
+  },
+  "media": {
+    "hero_background_gradient": {
+      "url": "https://images.unsplash.com/photo-1770339030328-d8b7c76adff1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTZ8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMGdyZWVuJTIwZ3JhZGllbnQlMjB0ZXh0dXJlfGVufDB8fHx8MTc3NzQ0NjEyMHww&ixlib=rb-4.1.0&q=85",
+      "description": "Abstract green blurred background used to give the hero section a calm vibe."
+    },
+    "night_fuel_theme": {
+      "url": "https://images.unsplash.com/photo-1764414596922-3e0bdb091d0b?crop=entropy&cs=srgb&fm=jpg",
+      "description": "Crescent moon glowing. Use in the 'Night Fuel' feature card."
+    },
+    "emotional_hook_bg": {
+      "url": "https://images.pexels.com/photos/13974641/pexels-photo-13974641.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Stacked zen stones. Use as a full-width background for the emotional hook quote section."
+    },
+    "testimonial_avatars": [
+      {
+        "url": "https://images.unsplash.com/photo-1758272421799-f944661c88f4?crop=entropy&cs=srgb&fm=jpg",
+        "name": "Sarah J.",
+        "role": "Freelancer"
+      },
+      {
+        "url": "https://images.pexels.com/photos/4047830/pexels-photo-4047830.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "name": "David M.",
+        "role": "Entrepreneur"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1765648580890-732fa6d769c5?crop=entropy&cs=srgb&fm=jpg",
+        "name": "Elena R.",
+        "role": "Product Designer"
+      }
+    ]
+  },
+  "motion_and_interactions": {
+    "scroll": "Use Lenis for smooth momentum scrolling.",
+    "hover": "Buttons have subtle scale (-translate-y-0.5) and shadow increase. Cards have soft border glow or slight lift.",
+    "entrances": "Framer motion fade-up for section contents on scroll."
+  },
+  "testing": {
+    "data_testid_rule": "All interactive and key informational elements MUST include a data-testid attribute formatted as kebab-case role-based (e.g., 'hero-waitlist-form', 'theme-toggle-btn')."
+  },
+  "instructions_to_main_agent": [
+    "Install and use Fraunces and Manrope from Google Fonts.",
+    "Do NOT use placeholder images. Rely exclusively on the URLs provided in the media section.",
+    "Implement a light/dark mode toggle (theme provider).",
+    "Build the phone mockup using raw Tailwind/CSS rather than an image to allow dynamic content (like dark mode UI inside the phone).",
+    "Use standard SVG icons (e.g., Lucide or Phosphor) for the App Store and Play Store buttons, avoiding raster placeholders.",
+    "Use standard Shadcn components for forms, but override their styles to match the 'soft_card' and 'glass' aesthetic."
+  ]
+}
