@@ -3,22 +3,37 @@ import { Shield, Mail } from "lucide-react";
 const cols = [
   {
     title: "Product",
-    links: ["Night Fuel", "Daily Action", "Weekly Wrap", "Wins Jar"],
+    links: [
+      { label: "Night Fuel", href: "#how-it-works" },
+      { label: "Daily Action", href: "#how-it-works" },
+      { label: "Weekly Wrap", href: "#how-it-works" },
+      { label: "Wins Jar", href: "#features" },
+    ],
   },
   {
     title: "Company",
-    links: ["About", "Manifesto", "Press", "Careers"],
+    links: [
+      { label: "About", href: "#what-is-breezee360" },
+      { label: "Manifesto", href: "#calm-productivity" },
+      { label: "Who it's for", href: "#who-its-for" },
+      { label: "Contact", href: "mailto:fans@breezee.uk" },
+    ],
   },
   {
     title: "Resources",
-    links: ["Help Center", "Privacy", "Terms", "Cookie settings"],
+    links: [
+      { label: "FAQ", href: "#faq" },
+      { label: "Privacy Policy", href: "/privacy" },
+      { label: "Help Center", href: "mailto:fans@breezee.uk" },
+      { label: "Terms", href: "/privacy" },
+    ],
   },
 ];
 
 const socials = [
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/company/breezee.uk",
+    href: "https://linkedin.com/company/breezee360",
     path: "M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v14H.22V8zm7.4 0h4.37v1.92h.06c.61-1.15 2.1-2.36 4.32-2.36 4.62 0 5.47 3.04 5.47 7v7.44h-4.56v-6.6c0-1.57-.03-3.6-2.2-3.6-2.2 0-2.54 1.72-2.54 3.49V22H7.62V8z",
   },
   {
@@ -56,12 +71,13 @@ export default function Footer() {
               />
             </a>
             <p className="mt-5 text-secondary-foreground text-base leading-relaxed max-w-sm">
-              A daily rhythm for humans who want to grow without grinding.
-              Productivity through well-being, not pressure.
+              Breezee360 is the calm productivity app for humans tired of
+              grinding. Build consistency through a daily rhythm of motivation,
+              action, and reflection — without burnout, guilt, or restart loops.
             </p>
             <div className="mt-6 flex items-center gap-2 text-sm text-secondary-foreground">
               <Shield className="w-4 h-4 text-primary" />
-              <span>Privacy-first by design — your data stays yours.</span>
+              <span>Privacy-first by design — your productivity data stays on your device.</span>
             </div>
             <a
               data-testid="footer-email-link"
@@ -106,13 +122,13 @@ export default function Footer() {
               </h4>
               <ul className="space-y-3">
                 {c.links.map((l) => (
-                  <li key={l}>
+                  <li key={l.label}>
                     <a
-                      href="#"
-                      data-testid={`footer-link-${l.toLowerCase().replace(/\s/g, "-")}`}
+                      href={l.href}
+                      data-testid={`footer-link-${l.label.toLowerCase().replace(/\s/g, "-")}`}
                       className="text-sm text-secondary-foreground hover:text-foreground transition-colors"
                     >
-                      {l}
+                      {l.label}
                     </a>
                   </li>
                 ))}

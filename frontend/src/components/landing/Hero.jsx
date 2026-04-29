@@ -10,7 +10,6 @@ export default function Hero() {
       data-testid="hero-section"
       className="relative overflow-hidden pt-12 md:pt-20 pb-24 md:pb-32"
     >
-      {/* Soft ambient gradient */}
       <div
         aria-hidden
         className="absolute inset-0 -z-10 opacity-90"
@@ -21,32 +20,31 @@ export default function Hero() {
       />
 
       <div className="container-soft grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        {/* LEFT — copy */}
         <div className="animate-fade-up">
           <span
             data-testid="hero-eyebrow"
             className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-accent text-accent-foreground border border-primary/15 text-xs font-medium tracking-wide"
           >
             <Star className="w-3.5 h-3.5 fill-current" />
-            A calmer way to stay consistent
+            The calm productivity app
           </span>
 
           <h1
             data-testid="hero-headline"
             className="mt-7 font-serif text-5xl md:text-6xl xl:text-7xl leading-[1.05] tracking-tight"
           >
-            Productivity that
+            Stay consistent
             <br />
-            <span className="italic text-primary">breathes</span> with you.
+            <span className="italic text-primary">without the burnout.</span>
           </h1>
 
           <p
             data-testid="hero-subheadline"
             className="mt-7 text-lg md:text-xl text-secondary-foreground max-w-xl leading-relaxed"
           >
-            Breezee360 is a daily rhythm system: motivation at night,
-            gentle action during the day, and reflection on Sunday — designed
-            for humans who are tired of toxic productivity apps.
+            Breezee360 is a daily rhythm app that turns motivation, action, and
+            reflection into one calm routine. Build habits that actually last —
+            no streak guilt, no toxic to-do lists, no Monday restarts.
           </p>
 
           <div className="mt-9 space-y-5">
@@ -55,12 +53,11 @@ export default function Hero() {
             <div className="flex flex-wrap items-center gap-3">
               <StoreBadges />
               <span className="text-xs text-muted-foreground ml-1">
-                Coming early 2026
+                iOS &amp; Android · launching early 2026
               </span>
             </div>
           </div>
 
-          {/* trust row */}
           <div className="mt-12 flex items-center gap-6">
             <div className="flex -space-x-2">
               {[
@@ -78,12 +75,11 @@ export default function Hero() {
             </div>
             <p className="text-sm text-secondary-foreground">
               Joined by <span className="font-semibold text-foreground">1,200+</span>{" "}
-              calm builders & freelancers
+              calm builders, freelancers &amp; students
             </p>
           </div>
         </div>
 
-        {/* RIGHT — phone mockup */}
         <div className="relative flex justify-center animate-fade-up [animation-delay:200ms]">
           <PhoneMockup />
         </div>

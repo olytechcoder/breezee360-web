@@ -6,8 +6,12 @@ const steps = [
     label: "01 · Night Fuel",
     icon: Moon,
     title: "Three quotes. One quiet moment.",
-    body: "Each night, Breezee360 hands you exactly three carefully chosen reflections — never an endless feed. You read, breathe, and rest. Tomorrow's intention is already lit.",
-    bullets: ["Limit-based design — no doomscroll", "Energy check-in", "Wins jar entry"],
+    body: "Each evening, Breezee360 hands you exactly three motivational quotes — never an endless feed. Read, breathe, and rest. Tomorrow's intention is already lit before you sleep.",
+    bullets: [
+      "Limit-based design — no doomscroll",
+      "Energy check-in to honour how today actually felt",
+      "Drop one win in your Wins Jar before lights out",
+    ],
     tone: "dark",
   },
   {
@@ -15,8 +19,12 @@ const steps = [
     label: "02 · Daily Action",
     icon: Sun,
     title: "Plan a day you can actually finish.",
-    body: "Write 1–3 honest priorities. Time-block them with breathing room. Mark wins, defer the rest without guilt — recovery is built in.",
-    bullets: ["Soft time-blocks", "Goal-aligned tasks", "One-tap defer, not delete"],
+    body: "Choose one to three honest priorities. Drop them into soft time-blocks with breathing room. Mark wins as you go, defer the rest without guilt — recovery is built into the system.",
+    bullets: [
+      "Soft time-blocks instead of rigid hour grids",
+      "Goal-aligned tasks tied to what matters this week",
+      "One-tap defer — never a punishment for moving on",
+    ],
     tone: "light",
   },
   {
@@ -24,8 +32,12 @@ const steps = [
     label: "03 · Weekly Wrap",
     icon: BarChart3,
     title: "A Sunday letter to yourself.",
-    body: "Every Sunday, Breezee360 writes you a soft summary — wins worth keeping, patterns worth seeing, energy worth honouring. Then a fresh, gentle week begins.",
-    bullets: ["Insight, not metrics", "Pattern recognition", "Plan next week with kindness"],
+    body: "Every Sunday, Breezee360 writes you a short reflection — wins worth keeping, energy patterns worth noticing, priorities worth carrying forward. Then a calm new week begins.",
+    bullets: [
+      "Insight, not vanity metrics",
+      "Pattern recognition across energy and consistency",
+      "Plan the next week with kindness, not pressure",
+    ],
     tone: "muted",
   },
 ];
@@ -39,14 +51,15 @@ export default function HowItWorks() {
     >
       <div className="container-soft">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="label-eyebrow">The daily rhythm</p>
+          <p className="label-eyebrow">How Breezee360 works</p>
           <h2 className="mt-5 font-serif text-4xl md:text-5xl leading-[1.1] tracking-tight">
             Three small rituals.
             <br />
-            One sustainable life.
+            One sustainable routine.
           </h2>
           <p className="mt-6 text-lg text-secondary-foreground">
-            Designed to feel like a deep breath, not a deadline.
+            A complete daily rhythm — designed to feel like a deep breath, not
+            a deadline.
           </p>
         </div>
 
@@ -83,7 +96,7 @@ export default function HowItWorks() {
                 </h3>
                 <p
                   className={`text-base leading-relaxed mb-6 ${
-                    isDark ? "text-emerald-50/80" : "text-secondary-foreground"
+                    isDark ? "text-emerald-50/85" : "text-secondary-foreground"
                   }`}
                 >
                   {s.body}

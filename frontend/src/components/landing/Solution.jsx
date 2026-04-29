@@ -4,16 +4,23 @@ export default function Solution() {
   return (
     <section
       data-testid="solution-section"
+      id="calm-productivity"
       className="py-24 md:py-32"
     >
       <div className="container-soft grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-5">
-          <p className="label-eyebrow">The Breezee360 way</p>
+          <p className="label-eyebrow">A calmer way to be productive</p>
           <h2 className="mt-5 font-serif text-4xl md:text-5xl leading-[1.1] tracking-tight">
-            A better way to
+            Build consistency,
             <br />
-            stay <span className="text-primary italic">consistent</span>.
+            <span className="text-primary italic">not pressure</span>.
           </h2>
+          <p className="mt-6 text-base md:text-lg text-secondary-foreground leading-relaxed">
+            Breezee360 replaces the grind with a gentle daily rhythm.
+            Sustainable habits, weekly clarity, and zero guilt — designed
+            around how humans actually live, not how productivity influencers
+            pretend to.
+          </p>
         </div>
 
         <div className="lg:col-span-7">
@@ -32,9 +39,9 @@ export default function Solution() {
                 { k: "🌙", t: "Night", s: "Motivation" },
                 { k: "☀", t: "Day", s: "Action" },
                 { k: "📊", t: "Week", s: "Reflection" },
-              ].map((c, i) => (
+              ].map((c) => (
                 <div
-                  key={i}
+                  key={c.t}
                   data-testid={`solution-loop-${c.t.toLowerCase()}`}
                   className="rounded-2xl bg-accent dark:bg-secondary/40 py-5 px-3"
                 >
