@@ -1,6 +1,8 @@
-import { Shield } from "lucide-react";
+import { Shield, Check } from "lucide-react";
 import WaitlistForm from "./WaitlistForm";
-import StoreBadges from "./StoreBadges";
+import LaunchBlock from "./LaunchBlock";
+
+const trust = ["No spam", "No pressure", "Just a quiet launch email"];
 
 export default function FinalCTA() {
   return (
@@ -26,15 +28,25 @@ export default function FinalCTA() {
             <span className="italic text-primary"> calm </span>
             way.
           </h2>
-          <p className="mt-6 text-lg text-secondary-foreground max-w-xl mx-auto">
+          <p className="mt-6 text-lg text-secondary-foreground max-w-[620px] mx-auto leading-[1.7]">
             Reserve your spot on the Breezee360 waitlist. We'll send a soft
             note when the app is ready — and a quiet thank-you, never a sales
             pitch.
           </p>
 
-          <div className="mt-10 flex flex-col items-center gap-6">
+          <div className="mt-10 flex flex-col items-center gap-7">
             <WaitlistForm variant="card" testidPrefix="cta-waitlist" />
-            <StoreBadges className="justify-center" />
+
+            <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-secondary-foreground">
+              {trust.map((t) => (
+                <li key={t} className="inline-flex items-center gap-2">
+                  <Check className="w-4 h-4 text-primary" />
+                  {t}
+                </li>
+              ))}
+            </ul>
+
+            <LaunchBlock align="center" />
 
             <p className="inline-flex items-center gap-2 text-xs text-muted-foreground">
               <Shield className="w-3.5 h-3.5 text-primary" />

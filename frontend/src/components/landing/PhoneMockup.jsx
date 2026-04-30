@@ -4,7 +4,7 @@
  */
 export default function PhoneMockup() {
   return (
-    <div className="relative mx-auto w-[280px] sm:w-[320px] md:w-[340px] animate-float">
+    <div className="relative mx-auto w-[300px] sm:w-[340px] md:w-[370px] animate-float">
       {/* soft glow halo */}
       <div className="absolute -inset-8 bg-primary/15 dark:bg-primary/25 blur-3xl rounded-full opacity-70 animate-soft-pulse" />
 

@@ -33,7 +33,7 @@ const cols = [
 const socials = [
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/company/breezee360",
+    href: "https://linkedin.com/company/breezee.uk",
     path: "M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v14H.22V8zm7.4 0h4.37v1.92h.06c.61-1.15 2.1-2.36 4.32-2.36 4.62 0 5.47 3.04 5.47 7v7.44h-4.56v-6.6c0-1.57-.03-3.6-2.2-3.6-2.2 0-2.54 1.72-2.54 3.49V22H7.62V8z",
   },
   {
@@ -48,7 +48,7 @@ const socials = [
   },
   {
     label: "X",
-    href: "https://x.com/breezee.uk",
+    href: "https://x.com/breezeeuk",
     path: "M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z",
   },
 ];
@@ -101,7 +101,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   aria-label={`${s.label} · @breezee.uk`}
                   data-testid={`footer-social-${s.label.toLowerCase()}`}
-                  className="grid place-items-center h-10 w-10 rounded-full text-secondary-foreground border border-border hover:text-primary hover:border-primary/40 hover:bg-accent transition-all duration-200"
+                  className="grid place-items-center h-10 w-10 rounded-full text-secondary-foreground border border-border hover:text-primary hover:border-primary/40 hover:bg-accent hover:-translate-y-1 transition-all duration-200"
                 >
                   <svg
                     viewBox="0 0 24 24"
@@ -139,7 +139,7 @@ export default function Footer() {
 
         <div className="mt-14 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-5 text-xs text-muted-foreground">
           <p className="text-center md:text-left">
-            © {new Date().getFullYear()} Breezee360. Built with calm.
+            © 2026 Breezee360. Built with calm.
           </p>
 
           <a

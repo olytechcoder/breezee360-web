@@ -31,8 +31,12 @@ const faqs = [
     a: "Breezee360 is for young professionals, freelancers, entrepreneurs, students, remote workers, and anyone who struggles with consistency or feels burned out by toxic productivity apps. If you start strong but fall off — Breezee360 is built for you.",
   },
   {
+    q: "Who builds Breezee360?",
+    a: "Breezee360 is developed by OLYTECH Design, a technology company focused on building scalable digital products. The team designs Breezee360 around a single principle: productivity through well-being, not pressure.",
+  },
+  {
     q: "When will Breezee360 launch?",
-    a: "Breezee360 is launching on iOS and Android in early 2026. Join the waitlist to be notified the moment the app is available — and to receive a calm welcome email, never a sales pitch.",
+    a: "Breezee360 is launching on iOS and Android on June 1, 2026. Join the waitlist to be notified the moment the app is available — and to receive a calm welcome email, never a sales pitch.",
   },
 ];
 

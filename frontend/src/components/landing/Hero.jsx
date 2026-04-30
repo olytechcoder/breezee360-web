@@ -1,6 +1,6 @@
 import PhoneMockup from "./PhoneMockup";
 import WaitlistForm from "./WaitlistForm";
-import StoreBadges from "./StoreBadges";
+import LaunchBlock from "./LaunchBlock";
 import BracketLabel from "./BracketLabel";
 
 export default function Hero() {
@@ -8,7 +8,7 @@ export default function Hero() {
     <section
       id="top"
       data-testid="hero-section"
-      className="relative overflow-hidden pt-12 md:pt-20 pb-24 md:pb-32"
+      className="relative overflow-hidden pt-12 md:pt-20 pb-28 md:pb-36"
     >
       <div
         aria-hidden
@@ -19,13 +19,13 @@ export default function Hero() {
         }}
       />
 
-      <div className="container-soft grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div className="animate-fade-up">
+      <div className="container-soft grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <div className="lg:col-span-7 animate-fade-up">
           <BracketLabel testid="hero-eyebrow">Calm productivity app</BracketLabel>
 
           <h1
             data-testid="hero-headline"
-            className="mt-7 font-serif text-5xl md:text-6xl xl:text-7xl leading-[1.05] tracking-tight"
+            className="mt-6 font-serif text-[44px] sm:text-5xl md:text-6xl xl:text-[64px] leading-[1.05] tracking-tight"
           >
             Stay consistent
             <br />
@@ -34,22 +34,16 @@ export default function Hero() {
 
           <p
             data-testid="hero-subheadline"
-            className="mt-7 text-lg md:text-xl text-secondary-foreground max-w-xl leading-relaxed"
+            className="mt-6 text-lg text-secondary-foreground max-w-[620px] leading-[1.7]"
           >
-            Breezee360 is a daily rhythm app that turns motivation, action, and
-            reflection into one calm routine. Build habits that actually last —
-            no streak guilt, no toxic to-do lists, no Monday restarts.
+            Breezee360 is a daily rhythm app that turns motivation, action,
+            and reflection into one calm routine. Build habits that last — no
+            streak guilt, no toxic to-do lists, no Monday restarts.
           </p>
 
-          <div className="mt-9 space-y-5">
+          <div className="mt-8 space-y-6 max-w-[620px]">
             <WaitlistForm variant="inline" testidPrefix="hero-waitlist" />
-
-            <div className="flex flex-wrap items-center gap-3">
-              <StoreBadges />
-              <span className="text-xs text-muted-foreground ml-1">
-                iOS &amp; Android · launching early 2026
-              </span>
-            </div>
+            <LaunchBlock align="left" />
           </div>
 
           <div className="mt-12 flex items-center gap-6">
@@ -74,7 +68,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative flex justify-center animate-fade-up [animation-delay:200ms]">
+        <div className="lg:col-span-5 relative flex justify-center lg:justify-end animate-fade-up [animation-delay:200ms]">
           <PhoneMockup />
         </div>
       </div>

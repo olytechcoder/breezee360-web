@@ -1,25 +1,54 @@
-/**
- * AEO answer block — directly answers "What is Breezee360?"
- * Rendered as natural paragraph + JSON-LD for AI search snippets.
- */
-export default function AnswerBlock() {
-  const answer =
-    "Breezee360 is a calm productivity app that helps people stay consistent without burnout. Instead of streaks and pressure, it follows a daily rhythm: motivation at night with three carefully chosen quotes (Night Fuel), gentle planning during the day with soft time-blocks and priorities (Daily Action), and a weekly reflection that summarises wins and energy patterns (Weekly Wrap). Built for freelancers, students, entrepreneurs, and anyone tired of toxic to-do apps, Breezee360 turns productivity into a calm, sustainable routine — not another source of guilt.";
+import { Moon, Sun, BarChart3 } from "lucide-react";
 
+const lead =
+  "Breezee360 is a calm productivity system built around a daily rhythm.";
+const aeoText =
+  "Breezee360 is a calm productivity app built around a daily rhythm: motivation at night with three intentional quotes (Night Fuel), action during the day with soft time-blocks (Daily Action), and reflection at the end of the week with Weekly Wrap. No streak pressure. No burnout loops.";
+
+const rows = [
+  { Icon: Moon, k: "Night", v: "motivation with 3 intentional quotes" },
+  { Icon: Sun, k: "Day", v: "action with soft time-blocks" },
+  { Icon: BarChart3, k: "Week", v: "reflection with Weekly Wrap" },
+];
+
+export default function AnswerBlock() {
   return (
     <section
       id="what-is-breezee360"
       data-testid="aeo-answer-section"
-      className="py-16 md:py-20 border-y border-border bg-background"
+      className="py-20 md:py-24 border-y border-border bg-background"
     >
-      <div className="container-soft max-w-4xl">
-        <p className="label-eyebrow">What is Breezee360?</p>
-        <p
-          data-testid="aeo-answer-text"
-          className="mt-5 font-serif text-2xl md:text-3xl leading-snug text-foreground"
-        >
-          {answer}
-        </p>
+      <div className="container-soft">
+        <div className="max-w-[680px]">
+          <p className="label-eyebrow">What is Breezee360?</p>
+          <p
+            data-testid="aeo-answer-lead"
+            className="mt-5 font-serif text-2xl md:text-[28px] leading-snug text-foreground"
+          >
+            {lead}
+          </p>
+
+          <ul className="mt-8 space-y-3.5" data-testid="aeo-answer-bullets">
+            {rows.map(({ Icon, k, v }) => (
+              <li
+                key={k}
+                className="flex items-start gap-3 text-base md:text-lg text-foreground/90 leading-[1.7]"
+              >
+                <span className="mt-0.5 grid place-items-center w-7 h-7 rounded-lg bg-primary/10 text-primary shrink-0">
+                  <Icon className="w-3.5 h-3.5" strokeWidth={2} />
+                </span>
+                <span>
+                  <strong className="font-semibold text-foreground">{k}</strong>
+                  <span className="text-secondary-foreground"> → {v}</span>
+                </span>
+              </li>
+            ))}
+          </ul>
+
+          <p className="mt-8 text-base md:text-lg text-secondary-foreground italic font-serif">
+            No streak pressure. No burnout loops.
+          </p>
+        </div>
       </div>
 
       <script
@@ -30,7 +59,7 @@ export default function AnswerBlock() {
             "@context": "https://schema.org",
             "@type": "Article",
             headline: "What is Breezee360?",
-            description: answer,
+            description: aeoText,
             author: { "@type": "Organization", name: "Breezee360" },
             publisher: {
               "@type": "Organization",
