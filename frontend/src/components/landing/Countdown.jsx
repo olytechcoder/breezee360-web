@@ -42,9 +42,12 @@ export default function Countdown({ className = "", testid = "launch-countdown" 
       {cells.map((c, i) => (
         <div
           key={i}
-          className="flex flex-col items-center justify-center px-3 py-2 rounded-xl bg-accent/60 dark:bg-secondary/40 border border-border min-w-[54px]"
+          className="flex flex-col items-center justify-center px-3 py-2 rounded-xl bg-accent/60 dark:bg-secondary/40 border border-border min-w-[54px] overflow-hidden"
         >
-          <span className="font-serif text-lg md:text-xl leading-none text-foreground tabular-nums">
+          <span
+            key={`${i}-${c.v}`}
+            className="font-serif text-lg md:text-xl leading-none text-foreground tabular-nums count-fade"
+          >
             {c.v}
           </span>
           <span className="mt-1 text-[9px] uppercase tracking-[0.2em] text-secondary-foreground">

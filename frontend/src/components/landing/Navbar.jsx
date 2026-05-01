@@ -78,7 +78,7 @@ export default function Navbar() {
           <a
             data-testid="navbar-cta-waitlist"
             href={location.pathname === "/" ? "#waitlist" : "/#waitlist"}
-            className="hidden sm:inline-flex btn-pill-primary text-sm py-2.5 px-5"
+            className="hidden sm:inline-flex btn-pill-primary btn-breathe text-sm py-2.5 px-5"
           >
             Join the waitlist
           </a>

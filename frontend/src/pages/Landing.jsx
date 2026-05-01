@@ -13,24 +13,33 @@ import Testimonials from "@/components/landing/Testimonials";
 import FAQ from "@/components/landing/FAQ";
 import FinalCTA from "@/components/landing/FinalCTA";
 import Footer from "@/components/landing/Footer";
+import Reveal from "@/components/Reveal";
+
+const sections = [
+  AnswerBlock,
+  Problem,
+  Solution,
+  HowItWorks,
+  Features,
+  Differentiation,
+  WhoItIsFor,
+  Benefits,
+  EmotionalHook,
+  Testimonials,
+  FAQ,
+  FinalCTA,
+];
 
 export default function Landing() {
   return (
     <main data-testid="landing-page" className="min-h-screen bg-background text-foreground antialiased">
       <Navbar />
       <Hero />
-      <AnswerBlock />
-      <Problem />
-      <Solution />
-      <HowItWorks />
-      <Features />
-      <Differentiation />
-      <WhoItIsFor />
-      <Benefits />
-      <EmotionalHook />
-      <Testimonials />
-      <FAQ />
-      <FinalCTA />
+      {sections.map((Section, i) => (
+        <Reveal key={i}>
+          <Section />
+        </Reveal>
+      ))}
       <Footer />
     </main>
   );

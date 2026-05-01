@@ -8,7 +8,7 @@ const hoverable = "hover:border-white/30 hover:-translate-y-1";
 const muted = "opacity-65 grayscale-[20%] cursor-not-allowed select-none";
 
 const TOOLTIP =
-  "Launching June 1 — join the waitlist to get notified first.";
+  "Launching June 1 — waitlist members get access first.";
 
 function LockedTooltip() {
   return (
@@ -18,7 +18,7 @@ function LockedTooltip() {
                  opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 group-active:opacity-100
                  transition-opacity duration-200
                  whitespace-nowrap rounded-xl px-3 py-2 text-[11px] font-medium
-                 bg-foreground text-background shadow-lg"
+                 bg-foreground text-background shadow-lg z-10"
     >
       {TOOLTIP}
     </span>
@@ -54,7 +54,7 @@ function LockBadge() {
   return (
     <span
       aria-hidden
-      className="absolute -top-1.5 -right-1.5 grid place-items-center w-5 h-5 rounded-full bg-background text-foreground border border-border"
+      className="lock-pulse-target absolute -top-1.5 -right-1.5 grid place-items-center w-5 h-5 rounded-full bg-background text-foreground border border-border"
     >
       <Lock className="w-2.5 h-2.5" />
     </span>
